@@ -1,0 +1,63 @@
+@import url("./reset.css");
+@import url("../components/_navBottomBar.css");
+
+/* Váriáveis de Estilo de acordo com o tema */
+:root {
+  .dark-theme {
+    --primary-color: #f0f0f0;
+
+    --primary-bg-color: #111217;
+    --secondary-bg-color: #28292e;
+    --border-color: #28292e;
+
+    --text-color: #9a9a9c;
+    --link-color: #9a9a9c;
+    --icon-color: #c7c8c9;
+  }
+
+  .light-theme {
+    --primary-color: #0b0b0f;
+
+    --primary-bg-color: #e9e9e9;
+    --secondary-bg-color: #c7c8c9;
+    --border-color: #c7c8c9;
+
+    --text-color: #28292e;
+    --link-color: #28292e;
+    --icon-color: #56575a;
+  }
+}
+
+/* Estilização geral */
+body {
+  background-color: var(--primary-bg-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  color: var(--icon-color);
+}
+
+/* Estilização do Cabeçalho */
+.s-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.s-header .s-header__brand .s-brand__logo {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+#s-toggle-theme {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
