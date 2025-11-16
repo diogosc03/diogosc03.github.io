@@ -30,22 +30,22 @@
       <nav class="s-header__nav">
         <ul class="s-menu menu--principal">
           <li class="s-menu__item">
-            <a class="s-menu__link active" href="#home">
+            <a class="s-menu__link active" href="#s-home">
               <span class="s-menu__text">Home</span>
             </a>
           </li>
           <li class="s-menu__item">
-            <a class="s-menu__link" href="#projetos">
+            <a class="s-menu__link" href="#s-projetos">
               <span class="s-menu__text">Projetos</span>
             </a>
           </li>
           <li class="s-menu__item">
-            <a class="s-menu__link" href="#sobre">
+            <a class="s-menu__link" href="#s-sobre">
               <span class="s-menu__text">Sobre</span>
             </a>
           </li>
           <li class="s-menu__item">
-            <a class="s-menu__link" href="#contato">
+            <a class="s-menu__link" href="#s-contato">
               <span class="s-menu__text">Contato</span>
             </a>
           </li>
@@ -68,25 +68,25 @@
     <nav class="nav--mobile">
       <ul class="s-menu menu--mobile">
         <li class="s-menu__item">
-          <a class="s-menu__link active" href="#home">
+          <a class="s-menu__link active" href="#s-home">
             <i class="s-menu__icon bi bi-house-door"></i>
             <span class="s-menu__text">Home</span>
           </a>
         </li>
         <li class="s-menu__item">
-          <a class="s-menu__link" href="#projetos">
+          <a class="s-menu__link" href="#s-projetos">
             <i class="s-menu__icon bi bi-window-stack"></i>
             <span class="s-menu__text">Projetos</span>
           </a>
         </li>
         <li class="s-menu__item">
-          <a class="s-menu__link" href="#sobre">
+          <a class="s-menu__link" href="#s-sobre">
             <i class="s-menu__icon bi bi-person"></i>
             <span class="s-menu__text">Sobre</span>
           </a>
         </li>
         <li class="s-menu__item">
-          <a class="s-menu__link" href="#contato">
+          <a class="s-menu__link" href="#s-contato">
             <i class="s-menu__icon bi bi-envelope"></i>
             <span class="s-menu__text">Contato</span>
           </a>
@@ -94,7 +94,7 @@
       </ul>
     </nav>
 
-    <main>
+    <main id="s-home">
       <div class="s-main__content_1">
         <h1><strong>Soluções Criativas &</strong> Desenvolvimento Front-end</h1>
         <p>
@@ -104,7 +104,7 @@
 
         <ul class="s-menu menu--social">
           <li>
-            <a class="s-menu__link" href="#">
+            <a class="s-menu__link" href="https://github.com/diogosc03">
               <i class="s-menu__icon bi bi-github"></i>
             </a>
           </li>
@@ -120,49 +120,350 @@
           </li>
         </ul>
 
-        <button class="s-btn btn--primary">
-          <span>Ver Projetos</span>
-          <i class="bi bi-arrow-down-right"></i>
-        </button>
+        <a href="#s-projetos">
+          <button class="s-btn btn--primary">
+            <span>Ver Projetos</span>
+            <i class="bi bi-arrow-down-right"></i>
+          </button>
+        </a>
       </div>
 
       <div class="s-main__content_2">
         <!-- Vídeo de Amostragem de Projetos -->
       </div>
 
-      <section class="s-skills">
+      <section class="s-technologies">
         <h2>Conhecimento nas Principais Tecnologias do Mercado</h2>
 
-        <ul class="s-skills__list">
-          <li class="s-skills__item">
+        <ul class="s-technologies__list">
+          <li class="s-technologies__item">
             <img
-              class="s-skills__logo"
+              class="s-technologies__logo"
               src="src/images/tecnologies/html5.svg"
               alt="Logo HTML 5"
             />
           </li>
-          <li class="s-skills__item">
+          <li class="s-technologies__item">
             <img
-              class="s-skills__logo"
+              class="s-technologies__logo"
               src="src/images/tecnologies/css3.svg"
               alt="Logo CSS 3"
             />
           </li>
-          <li class="s-skills__item">
+          <li class="s-technologies__item">
             <img
-              class="s-skills__logo"
+              class="s-technologies__logo"
               src="src/images/tecnologies/java-script.svg"
               alt="Logo JavaScript"
             />
           </li>
         </ul>
       </section>
+
+      <section id="s-projetos" class="s-projects">
+        <h2>Projetos</h2>
+
+        <div class="s-projects__container">
+          <div class="s-projects__card">
+            <img
+              class="s-card__cover"
+              src="./src/images/projects/yugioh.jpg"
+              alt="Capa yugioh card game"
+            />
+
+            <div class="s-card__body">
+              <h3 class="s-card__title">Yu-Gi-Oh Card Game</h3>
+
+              <p class="s-card__description">
+                Jogo de Cartas do Yu-Gi-Oh estilo Jokenpô
+              </p>
+
+              <ul class="s-card__list">
+                <li class="s-card__item">Cartas com Personagens de Yu-Gi-Oh</li>
+                <li class="s-card__item">Duelo Jogador x Máquina</li>
+                <li class="s-card__item">Contagem de Vitórias e Derrotas</li>
+              </ul>
+
+              <ul class="s-technologies__list">
+                <li class="s-technologies__item">
+                  <img
+                    class="s-technologies__logo"
+                    src="src/images/tecnologies/html5.svg"
+                    alt="Logo HTML 5"
+                  />
+                </li>
+                <li class="s-technologies__item">
+                  <img
+                    class="s-technologies__logo"
+                    src="src/images/tecnologies/css3.svg"
+                    alt="Logo CSS 3"
+                  />
+                </li>
+                <li class="s-technologies__item">
+                  <img
+                    class="s-technologies__logo"
+                    src="src/images/tecnologies/java-script.svg"
+                    alt="Logo JavaScript"
+                  />
+                </li>
+              </ul>
+
+              <div class="s-card__buttons">
+                <button class="s-btn btn--primary">
+                  <span>Prévia</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </button>
+
+                <button class="s-btn">
+                  <span>Repositório</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="s-projects__card card--reverse">
+            <img
+              class="s-card__cover"
+              src="./src/images/projects/stranger.jpg"
+              alt="Capa yugioh card game"
+            />
+
+            <div class="s-card__body">
+              <h3 class="s-card__title">Yu-Gi-Oh Card Game</h3>
+
+              <p class="s-card__description">
+                Jogo de Cartas do Yu-Gi-Oh estilo Jokenpô
+              </p>
+
+              <ul class="s-card__list">
+                <li class="s-card__item">Cartas com Personagens de Yu-Gi-Oh</li>
+                <li class="s-card__item">Duelo Jogador x Máquina</li>
+                <li class="s-card__item">Contagem de Vitórias e Derrotas</li>
+              </ul>
+
+              <ul class="s-technologies__list">
+                <li class="s-technologies__item">
+                  <img
+                    class="s-technologies__logo"
+                    src="src/images/tecnologies/html5.svg"
+                    alt="Logo HTML 5"
+                  />
+                </li>
+                <li class="s-technologies__item">
+                  <img
+                    class="s-technologies__logo"
+                    src="src/images/tecnologies/css3.svg"
+                    alt="Logo CSS 3"
+                  />
+                </li>
+                <li class="s-technologies__item">
+                  <img
+                    class="s-technologies__logo"
+                    src="src/images/tecnologies/java-script.svg"
+                    alt="Logo JavaScript"
+                  />
+                </li>
+              </ul>
+
+              <div class="s-card__buttons">
+                <button class="s-btn btn--primary">
+                  <span>Prévia</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </button>
+
+                <button class="s-btn">
+                  <span>Repositório</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="s-projects__card">
+            <img
+              class="s-card__cover"
+              src="./src/images/projects/multiverse.jpg"
+              alt="Capa yugioh card game"
+            />
+
+            <div class="s-card__body">
+              <h3 class="s-card__title">Yu-Gi-Oh Card Game</h3>
+
+              <p class="s-card__description">
+                Jogo de Cartas do Yu-Gi-Oh estilo Jokenpô
+              </p>
+
+              <ul class="s-card__list">
+                <li class="s-card__item">Cartas com Personagens de Yu-Gi-Oh</li>
+                <li class="s-card__item">Duelo Jogador x Máquina</li>
+                <li class="s-card__item">Contagem de Vitórias e Derrotas</li>
+              </ul>
+
+              <ul class="s-technologies__list">
+                <li class="s-technologies__item">
+                  <img
+                    class="s-technologies__logo"
+                    src="src/images/tecnologies/html5.svg"
+                    alt="Logo HTML 5"
+                  />
+                </li>
+                <li class="s-technologies__item">
+                  <img
+                    class="s-technologies__logo"
+                    src="src/images/tecnologies/css3.svg"
+                    alt="Logo CSS 3"
+                  />
+                </li>
+                <li class="s-technologies__item">
+                  <img
+                    class="s-technologies__logo"
+                    src="src/images/tecnologies/java-script.svg"
+                    alt="Logo JavaScript"
+                  />
+                </li>
+              </ul>
+
+              <div class="s-card__buttons">
+                <button class="s-btn btn--primary">
+                  <span>Prévia</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </button>
+
+                <button class="s-btn">
+                  <span>Repositório</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://github.com/diogosc03">
+            <button class="s-btn btn--primary">
+              <span>Ver Todos os Projetos</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </button>
+          </a>
+        </div>
+      </section>
+
+      <section id="s-sobre" class="s-about">
+        <div class="s-about__content_1">
+          <img class="s-about__photo" src="./src/images/avatar.png" alt="" />
+          <div class="s-about__description">
+            <h2>Sobre mim</h2>
+            <p>
+              Olá, meu nome é Diogo Corrêa. Apaixonado por tecnologia, meu
+              primeiro contato com a programação foi utilizando um aplicativo
+              chamado "GrassHopper", no qual rodei meu primeiro "Hello World!"
+              utilizando JavaScript. Atualmente curso graduação em Bacharelado
+              em Engenharia de Software na Universidade do Estado do Pará Caspus
+              XX - Castanhal e estou buscando minha primeira oportunidade de
+              trabalho com Desenvolvimento Front-end.
+            </p>
+            <div class="s-about__icons">
+              <i class="bi bi-translate"></i>
+              <span>Inglês: Básico/Intermediário</span>
+            </div>
+            <div class="s-description__buttons">
+              <a href="#" target="_blank">
+                <button class="s-btn btn--primary">
+                  <span>Conecte-se Comigo</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </button>
+              </a>
+              <a href="#">
+                <button class="s-btn">
+                  <span>Currículo</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-about__content_2">
+          <div class="col1">
+            <div class="row1">
+              <h3>Formação</h3>
+              <h4>Cursando Bacharelado em Engenharia de Software</h4>
+              <span>Out 2022 - Jun 2026</span>
+              <div class="s-about__icons">
+                <i class="bi bi-bank"></i>
+                <span>Universidade do Estado do Pará (UEPA)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col2">
+            <h3>Cursos</h3>
+            <div id="s-accordion">
+              <div class="s-accordion__item active">
+                <button class="s-accordion__header start">
+                  <span>Ri Happy - Front-End do Zero #2</span>
+                  <i class="bi bi-caret-down-fill"></i>
+                </button>
+                <div class="s-accordion__body">
+                  <p>Digital Innovation One. Set 2025 - Nov 2025. 75hrs.</p>
+                  <p>
+                    BootCamp focado na trinca HTML, CSS e JavaScript,
+                    tecnologias fundamentais para ser um bom desenvolvedor
+                    Front-end. Foram explorados vários assuntos, desde como
+                    funciona a comunicação cliente x servidor, passando pelas
+                    bases do HTML 5; CSS 3 e JavaScript; versionamento de código
+                    com Git e GitHub; responsividade e consumo de API. Ao
+                    concluir o bootcamp, foram desenvolvidos 10 projetos
+                    práticos para consolidar todos os conhecimentos adquiridos
+                    ao longo dos cursos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="s-contato" class="s-contact">
+        <h2>Contate-me</h2>
+        <p>
+          Estou disponível para serviços e novas conexões. Contate-me via e-mail
+          e conecte-se comigo através das minhas redes sociais.
+        </p>
+        <ul class="s-menu menu--social">
+          <li>
+            <a
+              class="s-menu__link"
+              href="https://github.com/diogosc03"
+              target="_blank"
+            >
+              <i class="s-menu__icon bi bi-github"></i>
+              <span>GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a class="s-menu__link" href="#" target="_blank">
+              <i class="s-menu__icon bi bi-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a class="s-menu__link" href="#" target="_blank">
+              <i class="s-menu__icon bi bi-instagram"></i>
+              <span>Instagram</span>
+            </a>
+          </li>
+        </ul>
+        <a href="mailto:diogosc03@hotmail.com">
+          <button class="s-btn btn--primary">
+            <span class="s-email">diogosc03@hotmail.com</span>
+          </button>
+        </a>
+      </section>
     </main>
 
     <footer>
       <p>
         &copy; 2025. Todos os Direitos Reservados. Diogo Corrêa. Desenvolvido
-        por <a href="https://github.com/diogosc03">DC</a>.
+        por <a href="https://github.com/diogosc03">DC</a> para o desafio de
+        projeto "Construindo seu Portfolio Front-end do Zero" da
+        <a href="https://www.dio.me/" target="_blank">Digital Innovation One</a
+        >.
       </p>
     </footer>
 
