@@ -3,11 +3,22 @@ const rootHmtl = document.documentElement;
 const accordionHeaders = document.querySelectorAll(".s-accordion__header");
 const menuLinks = document.querySelectorAll(".s-menu__link");
 
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+  rootHmtl.setAttribute("data-theme", "");
+  rootHmtl.setAttribute("data-theme", savedTheme);
+} else {
+  rootHmtl.setAttribute("data-theme", "dark");
+}
+
 function changeTheme() {
   const currentTheme = rootHmtl.getAttribute("data-theme");
 
   if (currentTheme === "dark") rootHmtl.setAttribute("data-theme", "light");
   else rootHmtl.setAttribute("data-theme", "dark");
+
+  localStorage.setItem("theme", rootHmtl.getAttribute("data-theme"));
 
   toggleTheme.classList.toggle("bi-sun");
   toggleTheme.classList.toggle("bi-moon");

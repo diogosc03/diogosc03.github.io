@@ -192,12 +192,12 @@ main,
   color: var(--primary-color);
 
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .s-btn:hover {
   transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .s-btn span,
@@ -208,6 +208,10 @@ main,
 
 .btn--primary {
   border: 1px solid var(--primary-color);
+}
+
+.btn--primary:hover {
+  box-shadow: 2px 2px 1px var(--primary-color);
 }
 
 .btn--primary span {
@@ -500,13 +504,12 @@ footer p a:hover {
 }
 
 /* Responsividade */
-
 @media (min-width: 768px) {
   .s-header {
-    border-bottom: 1px solid var(--primary-border-color);
     position: fixed;
+    border-bottom: 1px solid var(--primary-border-color);
     padding: 1rem 6rem;
-    background-color: var(--primary-bg-color);
+    background: var(--primary-bg-color);
   }
 
   .nav--mobile {
@@ -523,17 +526,24 @@ footer p a:hover {
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   h2 {
     font-size: 3rem;
-    letter-spacing: 0.4rem;
   }
 
   main,
-  .s-projects {
+  .s-projects,
+  .s-about {
     padding: 8rem 6rem 4rem 6rem;
+  }
+
+  .s-contact {
+    padding: 6rem;
+  }
+  .s-contact p {
+    width: 80%;
   }
 
   .s-main__content_1 {
@@ -544,7 +554,6 @@ footer p a:hover {
 
   .s-technologies {
     padding: 6.25rem 6rem 2rem 6rem;
-    /* margin-top: -6rem; Caso haja o vídeo */
   }
 
   footer {
@@ -565,11 +574,36 @@ footer p a:hover {
   .s-card__cover {
     width: 55%;
   }
+
+  .s-about {
+    gap: 5rem;
+  }
+
+  .s-about__content_1,
+  .s-about__content_2 {
+    display: grid;
+    grid-template-columns: 34% 60%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+
+  .s-about__description h2 {
+    text-align: left;
+  }
+
+  .s-description__buttons {
+    justify-content: flex-start;
+  }
 }
 
 @media (min-width: 1200px) {
   h2 {
     font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
   }
 
   main {
@@ -587,8 +621,8 @@ footer p a:hover {
   }
 
   .s-technologies h2 {
-    font-size: 3.5rem;
-    width: 60%;
+    font-size: 3rem;
+    width: 55%;
   }
 
   .s-technologies__list {
@@ -604,25 +638,14 @@ footer p a:hover {
     height: 3rem;
   }
 
-  .s-projects__card {
-    flex-direction: row;
+  p,
+  span,
+  li {
+    font-size: 1.15rem;
   }
 
-  .s-card__cover {
-    width: 50%;
-  }
-
-  .s-card__title {
-    font-size: 3.25rem;
-  }
-
-  .s-card__description,
-  .s-card__item {
-    font-size: 1.25rem;
-  }
-
-  .s-card__buttons,
-  .s-btn {
+  .s-card__buttons .s-btn,
+  .s-description__buttons .s-btn {
     width: auto;
   }
 }
@@ -633,11 +656,11 @@ footer p a:hover {
   }
 
   h2 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 
-  p {
-    font-size: 1.5rem;
+  h3 {
+    font-size: 3.25rem;
   }
 
   .s-header {
@@ -648,7 +671,9 @@ footer p a:hover {
     padding: 12rem 15rem 2rem;
   }
 
-  .s-technologies {
+  .s-technologies,
+  .s-projects,
+  .s-about {
     padding: 10rem 15rem 4rem;
   }
 }
