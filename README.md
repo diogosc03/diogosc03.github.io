@@ -37,4 +37,4 @@ Adicionada a feature para salvar o tema escolhido pelo usuário, utilizando loca
 
 ## Pré-visualizar Portfólio
 
-[Visualizar pelo GitHub Pages]()
+[Visualizar pelo GitHub Pages](https://diogosc03.github.io/)
