@@ -1,6 +1,10 @@
-# Desafio de Projeto: Construindo um Portfólio Front-end do Zero
+<h1>
+    <a href="https://www.dio.me/">
+     <img align="center" width="40px" src="https://hermes.digitalinnovation.one/assets/diome/logo-minimized.png"></a>
+    <span>Desafio de Projeto: Construindo um Portfólio Front-end do Zero</span>
+</h1>
 
-## Projeto desenvolvido para a conclusão do bootcamp Ri Happy Front-end do Zero #2 da [Digital Innovation One](https://www.dio.me/).
+## Projeto desenvolvido para a conclusão do bootcamp Ri Happy Front-end do Zero #2 da [Digital Innovation One](https://www.dio.me/)
 
 ## Objetivo
 
@@ -21,4 +25,16 @@ Desenvolvido utilizando o Protótipo do Figma [Protótipo](https://www.figma.com
 
 Com base no repositório de exemplo [Repo](https://github.com/elidianaandrade/dio-lab-portfolio)
 
-Foram utilizados outros projetos desenvolvidos ao longo do bootcamp para povoar a seção de **Projetos** do portfólio;
+Foram utilizados outros projetos desenvolvidos ao longo do bootcamp para povoar a seção de **Projetos** do portfólio
+
+Adicionada a feature para salvar o tema escolhido pelo usuário, utilizando local storage
+
+## Projetos utilizados no Portfólio
+
++ YuGiOh Card Game | [Repo](https://github.com/diogosc03/js-yugioh-assets)
++ Stranger Things Landing Page | [Repo](https://github.com/diogosc03/semana-frontend-mundo-invertido)
++ Spider-Man Multiverse | [Repo](https://github.com/diogosc03/Multiverso-SpiderMan)
+
+## Pré-visualizar Portfólio
+
+[Visualizar pelo GitHub Pages]()
