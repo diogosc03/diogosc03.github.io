@@ -2,43 +2,74 @@
 @import url("../components/_navBottomBar.css");
 
 /* Váriáveis de Estilo de acordo com o tema */
-:root {
-  .dark-theme {
-    --primary-color: #f0f0f0;
+:root,
+:root[data-theme="dark"] {
+  --primary-color: #f0f0f0;
 
-    --primary-bg-color: #111217;
-    --secondary-bg-color: #28292e;
-    --border-color: #28292e;
+  --primary-bg-color: #111217;
+  --secondary-bg-color: #28292e;
+  --primary-border-color: #28292e;
+  --secondary-border-color: #56575a;
 
-    --text-color: #9a9a9c;
-    --link-color: #9a9a9c;
-    --icon-color: #c7c8c9;
-  }
+  --text-color: #9a9a9c;
+  --link-color: #9a9a9c;
+  --icon-color: #c7c8c9;
+}
 
-  .light-theme {
-    --primary-color: #0b0b0f;
+:root[data-theme="light"] {
+  --primary-color: #0b0b0f;
 
-    --primary-bg-color: #e9e9e9;
-    --secondary-bg-color: #c7c8c9;
-    --border-color: #c7c8c9;
+  --primary-bg-color: #e9e9e9;
+  --secondary-bg-color: #c7c8c9;
+  --primary-border-color: #c7c8c9;
+  --secondary-border-color: #56575a;
 
-    --text-color: #28292e;
-    --link-color: #28292e;
-    --icon-color: #56575a;
-  }
+  --text-color: #28292e;
+  --link-color: #28292e;
+  --icon-color: #56575a;
+}
+
+hmtl[data-theme="light"] .s-brand__logo {
+  filter: invert(1);
 }
 
 /* Estilização geral */
 body {
   background-color: var(--primary-bg-color);
+  color: var(--text-color);
 }
 
 a {
   text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  color: var(--link-color);
+  font-weight: 600;
 }
 
 i {
   color: var(--icon-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "League Spartan", sans-serif;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: 200;
+}
+
+p {
+  font-size: 1.25rem;
+  text-align: justify;
 }
 
 /* Estilização do Cabeçalho */
@@ -52,6 +83,11 @@ i {
   padding: 0.5rem 1rem;
 }
 
+.s-header__toggle {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .s-header .s-header__brand .s-brand__logo {
   width: 3.25rem;
   height: 3.25rem;
@@ -60,4 +96,228 @@ i {
 #s-toggle-theme {
   font-size: 1.5rem;
   color: var(--primary-color);
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.s-header__nav {
+  display: none;
+}
+
+/* Estilização do Conteúdo Principal */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.5rem 1rem;
+}
+
+.s-main__content_1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.menu--social {
+  gap: 1rem;
+}
+
+.s-btn {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+
+  background: transparent;
+  border-radius: 3.125rem;
+
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.s-btn:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.s-btn span,
+.s-btn i {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.btn--primary {
+  border: 1px solid var(--primary-color);
+}
+
+.btn--primary span {
+  color: var(--primary-color);
+}
+
+/* Estilização do Vídeo de Amostragem de Projetos 
+.s-main__content_2 iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+*/
+
+/* Estilização da Seção de Tecnologias */
+.s-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25rem;
+
+  padding: 6.25rem 1rem 2rem 1rem;
+  margin-top: -2rem;
+  background: var(--secondary-bg-color);
+}
+
+.s-skills h2 {
+  font-size: 2rem;
+  text-transform: none;
+}
+
+.s-skills__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.s-skills__item {
+  width: 4.8rem;
+  height: 4.8rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  aspect-ratio: 1/1;
+  border: 1px solid var(--secondary-border-color);
+  border-radius: 50rem;
+}
+
+.s-skills__logo {
+  height: 2.4rem;
+  filter: invert(1);
+}
+
+/* Estilização do Rodapé */
+footer {
+  margin-bottom: 5rem;
+}
+
+footer p {
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsividade */
+
+@media (min-width: 768px) {
+  .s-header {
+    border-bottom: 1px solid var(--primary-border-color);
+    position: fixed;
+    padding: 1rem 6rem;
+    background-color: var(--primary-bg-color);
+  }
+
+  .nav--mobile {
+    display: none;
+  }
+
+  .s-header__nav {
+    display: flex;
+  }
+
+  .s-header__nav,
+  .s-header__toggle {
+    min-width: 30%;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  main {
+    padding: 8rem 6rem 4rem 6rem;
+  }
+
+  .s-main__content_1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .s-skills {
+    padding: 6.25rem 6rem 2rem 6rem;
+    /* margin-top: -6rem; Caso haja o vídeo */
+  }
+
+  footer {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding: 12rem 6rem 2rem;
+  }
+
+  .s-main__content_1 .s-btn {
+    width: auto;
+  }
+
+  .s-skills {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10rem 6rem 4rem;
+  }
+
+  .s-skills h2 {
+    font-size: 3.5rem;
+    width: 60%;
+  }
+
+  .s-skills__list {
+    gap: 1rem;
+  }
+
+  .s-skills__item {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .s-skills__logo {
+    height: 3rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 6.25rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .s-header {
+    padding: 1rem 15rem;
+  }
+
+  main {
+    padding: 12rem 15rem 2rem;
+  }
+
+  .s-skills {
+    padding: 10rem 15rem 4rem;
+  }
 }

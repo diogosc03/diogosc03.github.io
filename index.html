@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,6 +27,31 @@
   </head>
   <body class="dark-theme">
     <header class="s-header">
+      <nav class="s-header__nav">
+        <ul class="s-menu menu--principal">
+          <li class="s-menu__item">
+            <a class="s-menu__link active" href="#home">
+              <span class="s-menu__text">Home</span>
+            </a>
+          </li>
+          <li class="s-menu__item">
+            <a class="s-menu__link" href="#projetos">
+              <span class="s-menu__text">Projetos</span>
+            </a>
+          </li>
+          <li class="s-menu__item">
+            <a class="s-menu__link" href="#sobre">
+              <span class="s-menu__text">Sobre</span>
+            </a>
+          </li>
+          <li class="s-menu__item">
+            <a class="s-menu__link" href="#contato">
+              <span class="s-menu__text">Contato</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
       <div class="s-header__brand">
         <img
           class="s-brand__logo"
@@ -35,38 +60,112 @@
         />
       </div>
 
-      <i id="s-toggle-theme" class="bi bi-sun"></i>
+      <div class="s-header__toggle">
+        <i id="s-toggle-theme" class="bi bi-sun"></i>
+      </div>
     </header>
 
-    <footer>
-      <nav>
-        <ul class="s-menu menu--mobile">
-          <li class="s-menu__item">
-            <a class="s-menu__link active" href="#home">
-              <i class="s-menu__icon bi bi-house-door"></i>
-              <span class="s-menu__text">Home</span>
+    <nav class="nav--mobile">
+      <ul class="s-menu menu--mobile">
+        <li class="s-menu__item">
+          <a class="s-menu__link active" href="#home">
+            <i class="s-menu__icon bi bi-house-door"></i>
+            <span class="s-menu__text">Home</span>
+          </a>
+        </li>
+        <li class="s-menu__item">
+          <a class="s-menu__link" href="#projetos">
+            <i class="s-menu__icon bi bi-window-stack"></i>
+            <span class="s-menu__text">Projetos</span>
+          </a>
+        </li>
+        <li class="s-menu__item">
+          <a class="s-menu__link" href="#sobre">
+            <i class="s-menu__icon bi bi-person"></i>
+            <span class="s-menu__text">Sobre</span>
+          </a>
+        </li>
+        <li class="s-menu__item">
+          <a class="s-menu__link" href="#contato">
+            <i class="s-menu__icon bi bi-envelope"></i>
+            <span class="s-menu__text">Contato</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="s-main__content_1">
+        <h1><strong>Soluções Criativas &</strong> Desenvolvimento Front-end</h1>
+        <p>
+          Diogo de Souza Corrêa, Castanhal-PA, Estudante de Desenvolvimento
+          Front-End.
+        </p>
+
+        <ul class="s-menu menu--social">
+          <li>
+            <a class="s-menu__link" href="#">
+              <i class="s-menu__icon bi bi-github"></i>
             </a>
           </li>
-          <li class="s-menu__item">
-            <a class="s-menu__link" href="#projetos">
-              <i class="s-menu__icon bi bi-window-stack"></i>
-              <span class="s-menu__text">Projetos</span>
+          <li>
+            <a class="s-menu__link" href="#">
+              <i class="s-menu__icon bi bi-linkedin"></i>
             </a>
           </li>
-          <li class="s-menu__item">
-            <a class="s-menu__link" href="#sobre">
-              <i class="s-menu__icon bi bi-person"></i>
-              <span class="s-menu__text">Sobre</span>
-            </a>
-          </li>
-          <li class="s-menu__item">
-            <a class="s-menu__link" href="#contato">
-              <i class="s-menu__icon bi bi-envelope"></i>
-              <span class="s-menu__text">Contato</span>
+          <li>
+            <a class="s-menu__link" href="#">
+              <i class="s-menu__icon bi bi-instagram"></i>
             </a>
           </li>
         </ul>
-      </nav>
+
+        <button class="s-btn btn--primary">
+          <span>Ver Projetos</span>
+          <i class="bi bi-arrow-down-right"></i>
+        </button>
+      </div>
+
+      <div class="s-main__content_2">
+        <!-- Vídeo de Amostragem de Projetos -->
+      </div>
+
+      <section class="s-skills">
+        <h2>Conhecimento nas Principais Tecnologias do Mercado</h2>
+
+        <ul class="s-skills__list">
+          <li class="s-skills__item">
+            <img
+              class="s-skills__logo"
+              src="src/images/tecnologies/html5.svg"
+              alt="Logo HTML 5"
+            />
+          </li>
+          <li class="s-skills__item">
+            <img
+              class="s-skills__logo"
+              src="src/images/tecnologies/css3.svg"
+              alt="Logo CSS 3"
+            />
+          </li>
+          <li class="s-skills__item">
+            <img
+              class="s-skills__logo"
+              src="src/images/tecnologies/java-script.svg"
+              alt="Logo JavaScript"
+            />
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025. Todos os Direitos Reservados. Diogo Corrêa. Desenvolvido
+        por <a href="https://github.com/diogosc03">DC</a>.
+      </p>
     </footer>
+
+    <script src="./src/js/script.js" defer></script>
   </body>
 </html>

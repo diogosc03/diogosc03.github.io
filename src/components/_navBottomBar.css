@@ -19,7 +19,9 @@
 }
 
 .s-menu__link.active .s-menu__icon,
-.s-menu__link.active .s-menu__text {
+.s-menu__link.active .s-menu__text,
+.s-menu__link:hover .s-menu__icon,
+.s-menu__link:hover .s-menu__text {
   color: var(--primary-color);
   font-weight: 600;
 }
@@ -47,8 +49,6 @@
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
-  .menu--mobile {
-    display: none;
-  }
+.menu--principal {
+  gap: 1rem;
 }
