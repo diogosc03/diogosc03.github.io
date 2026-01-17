@@ -1,0 +1,71 @@
+@import url("./reset.css");
+
+/* Definição do esquema de cores para os temas dark e light */
+:root {
+  .dark-theme {
+    --title-color: #e0e0e0;
+    --text-color: #9f9f96;
+    --border-color: #304035;
+    --secondary-border-color: #233027;
+    --bg-color: #0e0f10;
+    --secondary-bg-color: #002b16;
+    --btn-text-color: #05b359;
+    --btn-bg-color: #101112;
+    --active-color: #1b2d1f;
+  }
+  
+  .light-theme {
+    --title-color: #212128;
+    --secondary-color: #2e2d2d;
+    --text-color: #757575;
+    --bg-color: #fafafa;
+    --border-color: #e6e6e6;
+    --btn-bg-color: #fafafa;
+    --active-color: #e5ecf4;
+  }
+}
+
+/* Estilização geral */
+body {
+  width: 100dvw;
+  height: auto;
+
+  display: flex;
+  flex-grow: 1;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  width: 100%;
+  height: auto;
+  font-size: 0.6rem;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  padding: 0 1rem;
+
+  display: flex;
+  flex-grow: 1;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+
+  border-top: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  background-color: var(--secondary-bg-color);
+  overflow: hidden;
+
+  font-size: 0.7rem;
+  text-align: center;
+}

@@ -1,0 +1,75 @@
+/* Estilização do menu de navegação */
+.header__container {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  border-bottom: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  background-color: var(--secondary-bg-color);
+  color: var(--title-color);
+}
+
+.menu {
+  width: 90%;
+  height: auto;
+}
+
+.menu__list {
+  width: 100%;
+  height: inherit;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.menu__item {
+  width: fit-content;
+  height: fit-content;
+}
+
+.menu__item > a {
+  width: inherit;
+  height: inherit;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 0.2rem;
+
+  font-size: 0.8rem;
+  color: var(--text-color);
+
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+#menu__icon {
+  font-size: 1rem;
+}
+
+.menu__item > a:hover {
+  color: var(--title-color);
+}
+
+.theme-toggle {
+  width: 10%;
+  height: 100%;
+  color: var(--text-color);
+}
+
+#toggle__icon {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+#toggle__icon:hover {
+  color: var(--title-color);
+}
