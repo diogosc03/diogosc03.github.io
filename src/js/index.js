@@ -1,6 +1,6 @@
 const body = document.body;
 const toggleButton = document.querySelector("#toggle__icon");
-let toggled = false;
+let toggled = true;
 
 function changeTheme() {
   if (toggled) {

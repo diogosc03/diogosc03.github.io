@@ -13,14 +13,16 @@
     --btn-bg-color: #101112;
     --active-color: #1b2d1f;
   }
-  
+
   .light-theme {
     --title-color: #212128;
-    --secondary-color: #2e2d2d;
     --text-color: #757575;
-    --bg-color: #fafafa;
     --border-color: #e6e6e6;
-    --btn-bg-color: #fafafa;
+    --secondary-border-color: #6f7072;
+    --bg-color: #fafafa;
+    --secondary-bg-color: #ccc;
+    --btn-text-color: #d9ebff;
+    --btn-bg-color: #3392ff;
     --active-color: #e5ecf4;
   }
 }
