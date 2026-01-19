@@ -3,9 +3,10 @@
   height: 100%;
   padding: 1rem 0.5rem;
 
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
   align-items: center;
   gap: 1rem;
 

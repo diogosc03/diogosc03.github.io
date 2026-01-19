@@ -1,0 +1,124 @@
+.projects__info {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.projects__item {
+  width: 100%;
+  height: fit-content;
+  padding: 0.5rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+
+  border: 2px solid var(--border-color);
+  border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.projects__item:hover {
+  box-shadow: 1px 1px 4px 2px var(--secondary-border-color);
+}
+
+.item__info {
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.item__photo {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+}
+
+.item__photo > img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+.item__description {
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item__description > h5 {
+  text-transform: uppercase;
+  color: var(--title-color);
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+
+.item__techs {
+  width: auto;
+  height: fit-content;
+
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.techs__icon {
+  width: 30px;
+  height: 30px;
+}
+
+.techs__icon > img {
+  width: inherit;
+  height: inherit;
+}
+
+.item__buttons {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.item__buttons > a {
+  width: 35%;
+  height: auto;
+  padding: 0.5rem;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  background-color: var(--btn-bg-color);
+  border: 3px solid var(--border-color);
+  border-radius: 1rem;
+
+  color: var(--btn-text-color);
+  font-size: 0.8rem;
+  box-shadow: 0px 1px 5px 1px var(--border-color);
+  transition: 0.4s ease-in;
+}
+
+.item__buttons > a:hover {
+  box-shadow: 0.1px 0.1px 5px 1px var(--primary-color);
+  transform: scale(1.1);
+}
+
+#buttons__icon {
+  font-size: 1rem;
+}

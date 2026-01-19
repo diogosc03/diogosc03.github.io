@@ -29,7 +29,7 @@
 
 /* Estilização geral */
 body {
-  width: 100dvw;
+  width: auto;
   height: auto;
 
   display: flex;
@@ -39,6 +39,7 @@ body {
 
   background-color: var(--bg-color);
   color: var(--text-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -70,4 +71,8 @@ footer {
 
   font-size: 0.7rem;
   text-align: center;
+}
+
+.teste {
+  border: 1px solid #f00;
 }

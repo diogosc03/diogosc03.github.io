@@ -21,13 +21,14 @@
 }
 
 .menu__list {
-  width: 100%;
+  width: 95%;
   height: inherit;
 
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
+  border-right: 2px solid var(--border-color);
 }
 
 .menu__item {
