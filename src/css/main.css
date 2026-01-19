@@ -45,6 +45,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: 0.4s ease;
 }
 
 header {

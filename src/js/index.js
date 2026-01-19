@@ -1,8 +1,11 @@
+// Lista de ícones para o tema light
 const lightIcons = [
   "./src/img/svg/html-light.svg",
   "./src/img/svg/css-light.svg",
   "./src/img/svg/js-light.svg"
 ];
+
+// Lista de ícones para o tema dark
 const darkIcons = [
   "./src/img/svg/html-dark.svg",
   "./src/img/svg/css-dark.svg",
@@ -10,12 +13,31 @@ const darkIcons = [
 ];
 
 const body = document.body;
-const techImages = document.querySelectorAll("#icon__logo")
-const toggleButton = document.querySelector("#toggle__icon");
+const techImages = document.querySelectorAll("#icon__logo") // Imagens dos ícones
+const toggleButton = document.querySelector("#toggle__icon"); // Botão de troca do tema 
 let toggled = true;
 
+// Verifica se já existe um tema salvo
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+  body.classList.remove("light-theme", "dark-theme");
+  body.classList.add(savedTheme);
+} else {
+  body.classList.add("light-theme"); // Tema padrão
+}
+
 function changeTheme() {
-  if (toggled) {
+  body.classList.toggle("dark-theme");
+  body.classList.toggle("light-theme");
+
+  // Descobre qual tema está ativo
+  const currentTheme = body.classList.contains("dark-theme") ? "dark-theme" : "light-theme";
+
+  // 3️⃣ Salva no localStorage
+  localStorage.setItem("theme", currentTheme);
+
+  /*if (toggled) {
     body.classList.remove("light-theme");
     body.classList.add("dark-theme");
 
@@ -33,7 +55,7 @@ function changeTheme() {
     });
 
     toggled = true;
-  }
+  }*/
 
   toggleButton.classList.toggle("bi-sun");
   toggleButton.classList.toggle("bi-moon");
