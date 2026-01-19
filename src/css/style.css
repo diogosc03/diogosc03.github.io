@@ -80,7 +80,7 @@
 
 .education__academy > h3 {
   color: var(--title-color);
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
 }
 
 .education__academy > h5 {
@@ -111,7 +111,8 @@
 }
 
 .about__buttons > a {
-  width: 100%;
+  min-width: 155px;
+  width: 25%;
   height: auto;
   padding: 0.5rem;
 
@@ -173,6 +174,7 @@
 }
 
 #projects > h3 {
+  font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   color: var(--title-color);
@@ -183,6 +185,7 @@
 #contact {
   width: 100%;
   height: auto;
+  margin-top: 2rem;
 
   display: flex;
   flex-flow: column nowrap;
@@ -191,12 +194,14 @@
 }
 
 .contact__info {
-  width: 100%;
+  min-width: 328px;
+  width: 50%;
   height: fit-content;
   text-align: center;
 }
 
 .contact__info > h3 {
+  font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   color: var(--title-color);
@@ -205,7 +210,8 @@
 }
 
 .contact__button {
-  width: 50%;
+  min-width: 154px;
+  width: 25%;
   height: fit-content;
   padding: 0.5rem;
 
@@ -219,7 +225,7 @@
 
 .contact__button > a {
   width: 100%;
-  height: inherit;
+  height: fit-content;
 
   display: flex;
   flex-flow: row nowrap;
@@ -259,6 +265,11 @@
 
 /* Responsividade */
 @media (width >= 42.5rem) {
+  .about__buttons > a {
+    justify-content: center;
+    gap: 1rem;
+  }
+
   .skills__info {
     grid-template-columns: repeat(2, 49%);
     grid-template-rows: auto;
@@ -269,6 +280,11 @@
     grid-template-rows: auto;
     gap: 0.5rem 1rem;
   }
+
+  .contact__button > a {
+    justify-content: center;
+    gap: 0.5rem;
+  }
 }
 
 @media (width >= 61.625rem) {
@@ -277,7 +293,7 @@
   }
 
   main {
-    max-width: 986px;
+    max-width: 61.625rem;
     margin: 0 auto;
     padding: 1rem;
 
@@ -285,17 +301,19 @@
     border-left: 0.3rem solid var(--border-color);
   }
 
+  footer {
+    border-radius: 0;
+  }
+
   .header__container {
     padding: 0.5rem 1rem;
+    border-radius: 0;
   }
 
   .menu__list {
     width: 100%;
     justify-content: flex-start;
     gap: 2rem;
-  }
-
-  .menu__item {
   }
 
   .menu__item > a {
@@ -321,17 +339,35 @@
     font-size: 1.3rem;
   }
 
-  .theme-toggle::after {
-    content: "Alterar Tema";
-    font-size: 0.8rem;
+  .about__perf {
+    width: 200px;
+    height: 200px;
   }
 
-  .skills__info {
+  .about__buttons > a {
+    justify-content: center;
     gap: 1rem;
   }
 
-  .info__item {
-    width: 95%;
+  .education__academy {
+    padding: 2.5rem 0;
+  }
+
+  .education__academy > h3 {
+    font-size: 1.5rem;
+  }
+
+  .education__academy > h5 {
+    font-size: 1rem;
+  }
+
+  .education__academy > span {
+    font-size: 0.9rem;
+  }
+
+  .skills__info {
+    max-width: 100%;
+    grid-template-columns: repeat(3, 32%);
   }
 
   .projects__info {
