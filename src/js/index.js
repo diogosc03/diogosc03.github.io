@@ -15,7 +15,6 @@ const darkIcons = [
 const body = document.body;
 const techImages = document.querySelectorAll("#icon__logo") // Imagens dos ícones
 const toggleButton = document.querySelector("#toggle__icon"); // Botão de troca do tema 
-let toggled = true;
 
 // Verifica se já existe um tema salvo
 const savedTheme = localStorage.getItem("theme");
@@ -34,44 +33,42 @@ function changeTheme() {
   // Descobre qual tema está ativo
   const currentTheme = body.classList.contains("dark-theme") ? "dark-theme" : "light-theme";
 
-  // 3️⃣ Salva no localStorage
+  // Salva no localStorage
   localStorage.setItem("theme", currentTheme);
 
-  /*if (toggled) {
-    body.classList.remove("light-theme");
-    body.classList.add("dark-theme");
-
+  // Altera os imagens dos ícones de acordo com o tema ativo
+  if (currentTheme === "dark-theme") {
     techImages.forEach((img) => {
       img.setAttribute("src", darkIcons[img.dataset.key])
     });
-
-    toggled = false;
   } else {
-    body.classList.remove("dark-theme");
-    body.classList.add("light-theme");
-
     techImages.forEach((img) => {
       img.setAttribute("src", lightIcons[img.dataset.key])
     });
+  }
 
-    toggled = true;
-  }*/
-
+  // Altera o ícone do botão segundo o tema ativo
   toggleButton.classList.toggle("bi-sun");
   toggleButton.classList.toggle("bi-moon");
 }
 
+// Evento de clique para alternar o botão
 toggleButton.addEventListener("click", changeTheme);
 
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".menu__item a")
+const sections = document.querySelectorAll("section"); // Seções da página
+const navLinks = document.querySelectorAll(".menu__item a") // Botões do menu de navegação
 
+// Evento de scroll da tela
 window.addEventListener('scroll', () => {
+  // Posição vertical do scroll
   const scrollPosition = window.scrollY;
+  // Posição final da tela
   const pageBottom = window.innerHeight + scrollPosition >= document.body.scrollHeight - 5;
 
+  // Verifica a seção atual
   let current = '';
 
+  // Percorre a lista de seções e verifica se o scroll chegou ao topo de alguma das seções
   sections.forEach(section => {
     const sectionTop = section.offsetTop - 100;
     if (scrollPosition >= sectionTop) {
@@ -79,10 +76,12 @@ window.addEventListener('scroll', () => {
     }
   });
 
+  // Verifica se chegou ao final da página e força a ativação da última seção
   if (pageBottom) {
     current = sections[sections.length - 1].id;
   }
 
+  // Destaca o botão da seção ativa
   navLinks.forEach(link => {
     link.classList.toggle(
       'active',
