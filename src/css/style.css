@@ -7,8 +7,9 @@
 /* Seção Sobre */
 #about {
   width: 100%;
-  height: fit-content;
+  height: auto;
   padding: 0 1rem;
+  margin-top: 5rem;
 
   display: flex;
   flex-flow: column nowrap;
@@ -144,7 +145,8 @@
 
   display: flex;
   flex-flow: column nowrap;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 1rem;
 
   text-align: center;
 }
@@ -167,7 +169,7 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 #projects > h3 {
@@ -238,6 +240,7 @@
 .contact__social {
   width: 100%;
   height: auto;
+  margin-bottom: 5rem;
 }
 
 .social__list {
@@ -255,12 +258,12 @@
 }
 
 /* Responsividade */
-@media (width >= 680px) {
+@media (width >= 42.5rem) {
   .skills__info {
     grid-template-columns: repeat(2, 49%);
     grid-template-rows: auto;
   }
-  
+
   .projects__info {
     grid-template-columns: repeat(2, 49%);
     grid-template-rows: auto;
@@ -268,7 +271,7 @@
   }
 }
 
-@media (width >= 986px) {
+@media (width >= 61.625rem) {
   body {
     gap: 0;
   }
@@ -282,11 +285,66 @@
     border-left: 0.3rem solid var(--border-color);
   }
 
+  .header__container {
+    padding: 0.5rem 1rem;
+  }
+
+  .menu__list {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  .menu__item {
+  }
+
+  .menu__item > a {
+    flex-flow: row nowrap;
+    gap: 0.5rem;
+
+    font-size: 1rem;
+  }
+
+  #menu__icon {
+    font-size: 1.3rem;
+  }
+
+  .theme-toggle {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  #toggle__icon {
+    font-size: 1.3rem;
+  }
+
+  .theme-toggle::after {
+    content: "Alterar Tema";
+    font-size: 0.8rem;
+  }
+
   .skills__info {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .info__item {
     width: 95%;
+  }
+
+  .projects__info {
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: auto;
+    gap: 0.5rem;
+  }
+
+  .item__photo {
+    height: 180px;
+  }
+
+  .item__buttons > a {
+    width: 40%;
   }
 }

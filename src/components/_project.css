@@ -1,5 +1,5 @@
 .projects__info {
-  width: 100%;
+  width: auto;
   height: auto;
   display: grid;
   grid-template-columns: 1fr;

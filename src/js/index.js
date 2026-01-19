@@ -40,3 +40,31 @@ function changeTheme() {
 }
 
 toggleButton.addEventListener("click", changeTheme);
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".menu__item a")
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+  const pageBottom = window.innerHeight + scrollPosition >= document.body.scrollHeight - 5;
+
+  let current = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (scrollPosition >= sectionTop) {
+      current = section.id;
+    }
+  });
+
+  if (pageBottom) {
+    current = sections[sections.length - 1].id;
+  }
+
+  navLinks.forEach(link => {
+    link.classList.toggle(
+      'active',
+      link.getAttribute('href') === `#${current}`
+    );
+  });
+});
