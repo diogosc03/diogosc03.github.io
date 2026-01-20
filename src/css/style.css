@@ -1,7 +1,7 @@
-@import url("./main.css");
-@import url("./_menu.css");
+@import url("main.css");
+@import url("_menu.css");
 @import url("_skill.css");
-@import url("./_project.css");
+@import url("_project.css");
 
 /* Estilização do conteúdo principal */
 /* Seção Sobre */
