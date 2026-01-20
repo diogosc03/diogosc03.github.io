@@ -1,7 +1,7 @@
 @import url("./main.css");
-@import url("../components/_menu.css");
-@import url("../components/_skill.css");
-@import url("../components/_project.css");
+@import url("./_menu.css");
+@import url("_skill.css");
+@import url("./_project.css");
 
 /* Estilização do conteúdo principal */
 /* Seção Sobre */
@@ -265,14 +265,21 @@
 
 /* Responsividade */
 @media (width >= 42.5rem) {
+  .about__perf {
+    width: 200px;
+    height: 200px;
+  }
+
   .about__buttons > a {
     justify-content: center;
     gap: 1rem;
   }
 
   .skills__info {
+    position: relative;
     grid-template-columns: repeat(2, 49%);
     grid-template-rows: auto;
+    gap: 0.5rem;
   }
 
   .projects__info {
@@ -340,8 +347,8 @@
   }
 
   .about__perf {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
 
   .about__buttons > a {
@@ -368,6 +375,7 @@
   .skills__info {
     max-width: 100%;
     grid-template-columns: repeat(3, 32%);
+    gap: 1.2rem;
   }
 
   .projects__info {
