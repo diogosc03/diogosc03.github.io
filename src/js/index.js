@@ -13,7 +13,7 @@ const darkIcons = [
 ];
 
 const body = document.body;
-const techImages = document.querySelectorAll("#icon__logo") // Imagens dos ícones
+const techImages = document.querySelectorAll("#icon__logo"); // Imagens dos ícones
 const toggleButton = document.querySelector("#toggle__icon"); // Botão de troca do tema 
 
 // Verifica se já existe um tema salvo
@@ -26,6 +26,17 @@ if (savedTheme) {
   body.classList.add("light-theme"); // Tema padrão
 }
 
+// Atualiza as imagens de tecnologia de acordo com o tema atual
+function updateTechImages(theme) {
+  const iconsToUse = theme === "dark-theme" ? darkIcons : lightIcons;
+  techImages.forEach((img) => {
+    img.setAttribute("src", iconsToUse[img.dataset.key]);
+  });
+}
+
+// Aplica o tema correto às imagens ao carregar a página
+updateTechImages(body.classList.contains("dark-theme") ? "dark-theme" : "light-theme");
+
 function changeTheme() {
   body.classList.toggle("dark-theme");
   body.classList.toggle("light-theme");
@@ -37,15 +48,7 @@ function changeTheme() {
   localStorage.setItem("theme", currentTheme);
 
   // Altera os imagens dos ícones de acordo com o tema ativo
-  if (currentTheme === "dark-theme") {
-    techImages.forEach((img) => {
-      img.setAttribute("src", darkIcons[img.dataset.key])
-    });
-  } else {
-    techImages.forEach((img) => {
-      img.setAttribute("src", lightIcons[img.dataset.key])
-    });
-  }
+  updateTechImages(currentTheme);
 
   // Altera o ícone do botão segundo o tema ativo
   toggleButton.classList.toggle("bi-sun");
